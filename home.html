@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>under.net</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo-container {
+            text-align: center;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+            animation: pulse 3s infinite alternate;
+        }
+        
+        .logo {
+            max-width: 800px;
+            width: 80%;
+            height: auto;
+        }
+        
+        /* Subtle pulse animation for the logo */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+                filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+            }
+            to {
+                transform: scale(1.05);
+                filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    <div class="logo-container">
+        <img src="chrome_logo_no_shadow.png" alt="under.net" class="logo">
+    </div>
+</body>
+</html>
