@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/background.png') no-repeat center center fixed !important;
+    background-size: cover !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    text-align: center;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    animation: pulse 3s infinite alternate;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logo {
+    max-width: 800px;
+    width: 80%;
+    height: auto;
+}
+
+.loading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loading-png {
+    width: 100px;
+    height: auto;
+    animation: pulsate 1s infinite;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+    to {
+        transform: scale(1.05);
+        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+    }
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
