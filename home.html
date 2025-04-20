@@ -8,27 +8,27 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
+            background: url('background.png') no-repeat center center fixed !important;
+            background-size: cover !important;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
         }
-        
+
         .logo-container {
             text-align: center;
             filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
             animation: pulse 3s infinite alternate;
         }
-        
+
         .logo {
             max-width: 800px;
             width: 80%;
             height: auto;
         }
-        
+
         /* Subtle pulse animation for the logo */
         @keyframes pulse {
             from {
@@ -40,10 +40,9 @@
                 filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
             }
         }
-        
     </style>
 </head>
-<body>
+<body data-darkreader-inline-bgimage="">
     <div class="glow"></div>
     <div class="logo-container">
         <img src="chrome_logo_no_shadow.png" alt="under.net" class="logo">
