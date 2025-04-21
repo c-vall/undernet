@@ -17,7 +17,6 @@ setTimeout(function() {
     });
 
     webamp.renderWhenReady(document.getElementById("webamp-container")).then(() => {
-        // Apply the bluesilver skin after render
         webamp.setSkinFromUrl("assets/winampskins/bluesilver");
     });
 }, 1500);
