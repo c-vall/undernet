@@ -3,7 +3,6 @@ setTimeout(function() {
     document.querySelector('.logo-container').style.opacity = '1';
 
     const webamp = new Webamp({
-        
         initialTracks: [
             {
                 metaData: {
@@ -14,16 +13,11 @@ setTimeout(function() {
                 duration: 5.322286
             }
         ],
-
-        availableSkins: [
-            {
-              url: "assets/winampskins/bluesilver",
-              name: "bluesilver",
-            },
-        ],
-
         target: document.getElementById("webamp-container")
     });
 
-    webamp.renderWhenReady(document.getElementById("webamp-container"));
+    webamp.renderWhenReady(document.getElementById("webamp-container")).then(() => {
+        // Apply the bluesilver skin after render
+        webamp.setSkinFromUrl("assets/winampskins/bluesilver");
+    });
 }, 1500);
