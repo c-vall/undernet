@@ -48,18 +48,13 @@ body {
   font-size: 30px;
   padding: 15px;
 }
-
-.main-content {
-  flex: 1 1 auto;
-  height: 100%;
-}
-
 .logo-container {
   text-align: center;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
   animation: pulse 3s infinite alternate;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  flex: 0 1 auto;
 }
 
 .logo {
