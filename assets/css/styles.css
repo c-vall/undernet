@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Neutronica Geometric';
-  src: url('../fonts/Neutronica Geometric.ttf') format('truetype');
+  font-family: "Neutronica Geometric";
+  src: url("../fonts/Neutronica Geometric.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Neutronica DNA';
-  src: url('../fonts/Neutronica DNA.ttf') format('truetype');
+  font-family: "Neutronica DNA";
+  src: url("../fonts/Neutronica DNA.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .header-item {
-  font-family: 'Neutronica Geometric', sans-serif;
+  font-family: "Neutronica Geometric", sans-serif;
   color: white;
   display: block;
   list-style-type: none;
@@ -88,11 +88,11 @@ body {
 
 @keyframes pulse {
   from {
-    transform: scale(1);
+    transform: scale(0.95);
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
   }
   to {
-    transform: scale(1.05);
+    transform: scale(1);
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
   }
 }
