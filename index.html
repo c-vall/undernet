@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>under.net</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/undernetlogo.png">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body data-darkreader-inline-bgimage="">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/undernetlogo.png"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-darkreader-inline-bgimage="">
     <div class="header">
-        <ul>
-            <li class="header-item">Profile</li>
-            <li class="header-item">Members</li>
-            <li class="header-item">Merchandise</li>
-            <li class="header-item">About</li>
-            <li class="header-item">Contact</li>
-        </ul>
+      <ul>
+        <li class="header-item">Profile</li>
+        <li class="header-item">Members</li>
+        <li class="header-item">Merchandise</li>
+        <li class="header-item">About</li>
+        <li class="header-item">Contact</li>
+      </ul>
     </div>
-    <div class="loading-container">
-        <img src="assets/images/loading.png" alt="Loading..." class="loading-png">
+    <div class="main-content">
+      <div class="loading-container">
+        <img
+          src="assets/images/loading.png"
+          alt="Loading..."
+          class="loading-png"
+        />
+      </div>
+      <div class="logo-container">
+        <img
+          src="assets/images/chrome_logo_no_shadow.png"
+          alt="under.net"
+          class="logo"
+        />
+      </div>
+      <div id="webamp-container"></div>
+      <script src="https://unpkg.com/webamp"></script>
+      <script src="assets/js/webamp.js"></script>
+      <script src="assets/js/script.js"></script>
     </div>
-    <div class="logo-container">
-        <img src="assets/images/chrome_logo_no_shadow.png" alt="under.net" class="logo">
-    </div>
-    <div id="webamp-container"></div>
-    <script src="https://unpkg.com/webamp"></script>
-    <script src="assets/js/webamp.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
