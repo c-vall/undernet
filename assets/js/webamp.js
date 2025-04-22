@@ -15,40 +15,40 @@ const disc31tracks = [
 ]
 const disc32url = "assets/tracks/DISC3.2-RAPTURE/"
 const disc32tracks = [
-    {url: `${disc32url}01.pixygarden-Floating_Angels.mp3` },
-    {url: `${disc32url}02.Helena_DLX-Cloud9.mp3` },
-    {url: `${disc32url}03.nabii-ALL_THE_WAY.mp3` },
-    {url: `${disc32url}04.earthangelbaby-you_remind_me.mp3` },
-    {url: `${disc32url}05.2040x2040-ERRORCODE2040.mp3` },
-    {url: `${disc32url}06.enable_secret-make_u_stay.mp3` },
-    {url: `${disc32url}07.dreamloader-eurolife.mp3` },
-    {url: `${disc32url}08.beansclub-still_thinking_bout_you.mp3` },
+    { url: `${disc32url}01.pixygarden-Floating_Angels.mp3` },
+    { url: `${disc32url}02.Helena_DLX-Cloud9.mp3` },
+    { url: `${disc32url}03.nabii-ALL_THE_WAY.mp3` },
+    { url: `${disc32url}04.earthangelbaby-you_remind_me.mp3` },
+    { url: `${disc32url}05.2040x2040-ERRORCODE2040.mp3` },
+    { url: `${disc32url}06.enable_secret-make_u_stay.mp3` },
+    { url: `${disc32url}07.dreamloader-eurolife.mp3` },
+    { url: `${disc32url}08.beansclub-still_thinking_bout_you.mp3` },
 ]
 const disc33url = "assets/tracks/DISC3.3-SHIMMER/"
 const disc33tracks = [
-    {url: `${disc33url}01.AITANA_OFICIAL-isthisrlylove.mp3` },
-    {url: `${disc33url}02.stillscapes-RADIANCE.mp3` },
-    {url: `${disc33url}03.EDENA-Voices.mp3` },
-    {url: `${disc33url}04.juriha-jisatsu_nenryo2.mp3` },
-    {url: `${disc33url}05.Aero-Ji-Get_Through!.mp3` },
-    {url: `${disc33url}06.ASL-BiOHAZARD.mp3` },
-    {url: `${disc33url}07.purityleech-What_I_Want_To_Tell_You.mp3` },
-    {url: `${disc33url}08.luuxu-SUPADANCEFREAK.mp3` },
-    {url: `${disc33url}09.jumble-I_DONT_LIKE_THIS_PARTY.mp3` },
+    { url: `${disc33url}01.AITANA_OFICIAL-isthisrlylove.mp3` },
+    { url: `${disc33url}02.stillscapes-RADIANCE.mp3` },
+    { url: `${disc33url}03.EDENA-Voices.mp3` },
+    { url: `${disc33url}04.juriha-jisatsu_nenryo2.mp3` },
+    { url: `${disc33url}05.Aero-Ji-Get_Through!.mp3` },
+    { url: `${disc33url}06.ASL-BiOHAZARD.mp3` },
+    { url: `${disc33url}07.purityleech-What_I_Want_To_Tell_You.mp3` },
+    { url: `${disc33url}08.luuxu-SUPADANCEFREAK.mp3` },
+    { url: `${disc33url}09.jumble-I_DONT_LIKE_THIS_PARTY.mp3` },
 ]
 
 const disc34url = "assets/tracks/DISC3.4-ECCENTRICS/"
 const disc34tracks = [
-    {url: `${disc34url}01.Squidgy_Ghost_In_The_System-wisteria.mp3` },
-    {url: `${disc34url}02.c678924-hesperiidae.mp3` },
-    {url: `${disc34url}03.Anthony1-beansclub.mp3` },
-    {url: `${disc34url}04.Golemm-error.mp3` },
-    {url: `${disc34url}05.phosphorrgirl-next_generation.mp3` },
-    {url: `${disc34url}06.HUMAN_PART-STJ.mp3` },
-    {url: `${disc34url}07.Mrs.Glare-baroque_of_moo.mp3` },
-    {url: `${disc34url}08.Zhnoi-denpa.mp3` },
-    {url: `${disc34url}09.echia-in_my_younger_days.mp3` },
-    {url: `${disc34url}10.kiitzuna-dehyalyn.mp3` },
+    { url: `${disc34url}01.Squidgy_Ghost_In_The_System-wisteria.mp3` },
+    { url: `${disc34url}02.c678924-hesperiidae.mp3` },
+    { url: `${disc34url}03.Anthony1-beansclub.mp3` },
+    { url: `${disc34url}04.Golemm-error.mp3` },
+    { url: `${disc34url}05.phosphorrgirl-next_generation.mp3` },
+    { url: `${disc34url}06.HUMAN_PART-STJ.mp3` },
+    { url: `${disc34url}07.Mrs.Glare-baroque_of_moo.mp3` },
+    { url: `${disc34url}08.Zhnoi-denpa.mp3` },
+    { url: `${disc34url}09.echia-in_my_younger_days.mp3` },
+    { url: `${disc34url}10.kiitzuna-dehyalyn.mp3` },
 ]
 
 
@@ -100,10 +100,12 @@ setTimeout(function() {
             url: "assets/winampskins/bluesilver"
         },
 
-        target: document.getElementById("webamp-container")
-    });
+    target: document.getElementById("webamp-container"),
+  });
 
-    webamp.renderWhenReady(document.getElementById("webamp-container")).then(() => {
-        webamp.setSkinFromUrl("assets/winampskins/bluesilver");
+  webamp
+    .renderWhenReady(document.getElementById("webamp-container"))
+    .then(() => {
+      webamp.setSkinFromUrl("assets/winampskins/bluesilver");
     });
 }, 1500);
