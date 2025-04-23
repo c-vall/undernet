@@ -103,29 +103,41 @@ body {
   transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+#DISC11BTN {
+  background: url("../images/cd11.png") no-repeat center center;
+  background-size: contain;
+}
+#DISC21BTN {
+  background: url("../images/cd21.png") no-repeat center center;
+  background-size: contain;
+}
+#DISC22BTN {
+  background: url("../images/cd22.png") no-repeat center center;
+  background-size: contain;
+}
+#DISC23BTN {
+  background: url("../images/cd23.png") no-repeat center center;
+  background-size: contain;
+}
 #DISC31BTN {
-  background: url("../images/cd1.png") no-repeat center center;
+  background: url("../images/cd31.png") no-repeat center center;
   background-size: contain;
 }
 #DISC32BTN {
-  background: url("../images/cd2.png") no-repeat center center;
+  background: url("../images/cd32.png") no-repeat center center;
   background-size: contain;
 }
 #DISC33BTN {
-  background: url("../images/cd3.png") no-repeat center center;
+  background: url("../images/cd33.png") no-repeat center center;
   background-size: contain;
 }
 #DISC34BTN {
-  background: url("../images/cd4.png") no-repeat center center;
+  background: url("../images/cd34.png") no-repeat center center;
   background-size: contain;
 }
 
-.cdbutton:hover {
-  animation: spin 0.5s ease-in-out;
-}
-
 .rotate {
-  animation: spin 2s linear infinite;
+  animation: spin 0.9s linear infinite;
 }
 /* ----DISCS/CD STUFF---- */
 

@@ -1,5 +1,4 @@
 // --- Disc Metadata ---
-
 const disc31url = "assets/tracks/DISC3.1-SURGE/";
 const disc31tracks = [
   { url: `${disc31url}01.Sienna_Sleep-SpectrumSetup420.mp3` },
@@ -132,4 +131,3 @@ WINAMPBTN.addEventListener("click", () => {
   webamp.reopen();
   WINAMPBTN.style.opacity = 0;
 });
-
