@@ -72,7 +72,7 @@ DISCBtn32.addEventListener("click", click32);
 
 const DISCBtn33 = document.getElementById("DISC33BTN");
 function click33() {
-  webamp.setTracksToPlay(disc32tracks);
+  webamp.setTracksToPlay(disc33tracks);
 }
 DISCBtn33.addEventListener("click", click33);
 
