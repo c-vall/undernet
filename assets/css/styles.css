@@ -48,10 +48,6 @@ body {
   padding: 15px;
 }
 
-#WINAMPBTN {
-  display: none;
-}
-
 .main-content {
   display: flex;
   flex: 1;
@@ -143,12 +139,35 @@ body {
 }
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 10vh;
   width: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  margin: auto;
+}
+
+#WINAMPBTN {
+  opacity: 0;
+  margin: 0 20px 0 20px;
+  width: 50px;
+  height: 50px;
+  background: rgb(214, 214, 214);
+  color: rgb(126, 126, 126);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.5s;
+  transition: color 0.5s;
+}
+
+#WINAMPBTN:hover {
+  background: rgb(141, 141, 141);
+  color: rgb(224, 224, 224);
 }
 
 @keyframes pulse {
