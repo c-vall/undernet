@@ -124,11 +124,12 @@ const WINAMPBTN = document.getElementById("WINAMPBTN");
 
 // When Webamp closes, show the reopen button
 webamp.onClose(() => {
-  WINAMPBTN.style.display = "block";
+  WINAMPBTN.style.opacity = 1;
 });
 
 // When button is clicked, reopen Webamp and hide the button
 WINAMPBTN.addEventListener("click", () => {
   webamp.reopen();
-  WINAMPBTN.style.display = "none";
+  WINAMPBTN.style.opacity = 0;
 });
+
