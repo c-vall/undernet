@@ -48,6 +48,21 @@ body {
   font-size: 30px;
   padding: 15px;
 }
+
+.main-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.disc-buttons {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 .logo-container {
   text-align: center;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
@@ -55,6 +70,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   flex: 0 1 auto;
+  width: 100%;
 }
 
 .logo {
@@ -79,6 +95,11 @@ body {
   width: 100px;
   height: auto;
   animation: pulsate 1s infinite;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
 }
 
 @keyframes pulse {
