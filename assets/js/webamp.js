@@ -93,12 +93,10 @@ const webamp = new Webamp({
     importButterchurn: () => Promise.resolve(window.butterchurn),
     getPresets: () => {
       const presets = window.butterchurnPresets.getPresets();
-      return Object.keys(presets).map((name) => {
-        return {
-          name,
-          butterchurnPresetObject: presets[name],
-        };
-      });
+      return Object.keys(presets).map((name) => ({
+        name,
+        butterchurnPresetObject: presets[name],
+      }));
     },
     butterchurnOpen: true,
   },
@@ -118,6 +116,8 @@ const webamp = new Webamp({
 
 webamp.renderWhenReady(document.getElementById("webamp-container")).then(() => {
   webamp.setSkinFromUrl("assets/winampskins/bluesilver");
+
+  webamp.store.dispatch({ type: "SET_VOLUME", volume: 15 });
 });
 
 const WINAMPBTN = document.getElementById("WINAMPBTN");
