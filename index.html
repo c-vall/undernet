@@ -22,13 +22,6 @@
       </ul>
     </div>
     <div class="main-content">
-      <div class="loading-container">
-        <img
-          src="assets/images/loading.png"
-          alt="Loading..."
-          class="loading-png"
-        />
-      </div>
       <div class="logo-container">
         <img
           src="assets/images/chrome_logo_no_shadow.png"
@@ -36,16 +29,17 @@
           class="logo"
         />
       </div>
-      <button id="DISC31BTN">DISC 3.1</button>
-      <button id="DISC32BTN">DISC 3.2</button>
-      <button id="DISC33BTN">DISC 3.3</button>
-      <button id="DISC34BTN">DISC 3.4</button>
-      
+      <div class="disc-container">
+        <button id="DISC31BTN" class="cdbutton">DISC 3.1</button>
+        <button id="DISC32BTN" class="cdbutton">DISC 3.2</button>
+        <button id="DISC33BTN" class="cdbutton">DISC 3.3</button>
+        <button id="DISC34BTN" class="cdbutton">DISC 3.4</button>
+      </div>
 
       <div id="webamp-container"></div>
       <script src="https://unpkg.com/webamp"></script>
       <script src="assets/js/webamp.js"></script>
-      <script src="assets/js/script.js"></script>
+      <script src="assets/js/cdSpin.js"></script>
     </div>
   </body>
 </html>

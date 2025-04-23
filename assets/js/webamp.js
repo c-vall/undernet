@@ -51,61 +51,48 @@ const disc34tracks = [
     { url: `${disc34url}10.kiitzuna-dehyalyn.mp3` },
 ]
 
+const Winamp = window.Webamp
+if(!Webamp.browserIsSupported()) {
+    alert("Oh no! Webamp does not work!")
+    throw new Error("What's the point of anything?")
+}
 
-setTimeout(function() {
-    document.querySelector('.loading-container').style.opacity = '0';
-    document.querySelector('.logo-container').style.opacity = '1';
+// --- Disc Loaders ---
+const DISCBtn31 = document.getElementById('DISC31BTN');
+function click31() {
+    webamp.setTracksToPlay(disc31tracks)
+}
+DISCBtn31.addEventListener('click', click31);
 
-    const Winamp = window.Webamp
-    if(!Webamp.browserIsSupported()) {
-        alert("Oh no! Webamp does not work!")
-        throw new Error("What's the point of anything?")
-    }
+const DISCBtn32 = document.getElementById('DISC32BTN');
+function click32() {
+    webamp.setTracksToPlay(disc32tracks)
+}
+DISCBtn32.addEventListener('click', click32);
 
+const DISCBtn33 = document.getElementById('DISC33BTN');
+function click33() {
+    webamp.setTracksToPlay(disc32tracks)
+}
+DISCBtn33.addEventListener('click', click33);
 
-    // --- Disc Loaders ---
-    // theres probably a smarter way to do this, like just pass in the disc as an argument
-    // TODO: clean this up and use images/gif for start and playing animation
-    const DISCBtn31 = document.getElementById('DISC31BTN');
-    function click31() {
-        webamp.setTracksToPlay(disc31tracks)
-    }
-    DISCBtn31.addEventListener('click', click31);
-    
-    const DISCBtn32 = document.getElementById('DISC32BTN');
-    function click32() {
-        webamp.setTracksToPlay(disc32tracks)
-    }
-    DISCBtn32.addEventListener('click', click32);
+const DISCBtn34 = document.getElementById('DISC34BTN');
+function click34() {
+    webamp.setTracksToPlay(disc34tracks)
+}
+DISCBtn34.addEventListener('click', click34);
 
-    const DISCBtn33 = document.getElementById('DISC33BTN');
-    function click33() {
-        webamp.setTracksToPlay(disc32tracks)
-    }
-    DISCBtn33.addEventListener('click', click33);
-
-    const DISCBtn34 = document.getElementById('DISC34BTN');
-    function click34() {
-        webamp.setTracksToPlay(disc34tracks)
-    }
-    DISCBtn34.addEventListener('click', click34);
-
-
-    // --- Initialize Webamp
-    const webamp = new Webamp({
-        initialTracks: disc31tracks,
-        
-        // add initialskin maybe:
-        initialSkin: {
-            url: "assets/winampskins/bluesilver"
-        },
-
+// --- Initialize Webamp
+const webamp = new Webamp({
+    initialTracks: disc31tracks,
+    initialSkin: {
+        url: "assets/winampskins/bluesilver"
+    },
     target: document.getElementById("webamp-container"),
-  });
+});
 
-  webamp
+webamp
     .renderWhenReady(document.getElementById("webamp-container"))
     .then(() => {
       webamp.setSkinFromUrl("assets/winampskins/bluesilver");
     });
-}, 1500);
