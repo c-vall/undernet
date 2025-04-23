@@ -150,7 +150,10 @@ body {
 .rotate {
   animation: spin 0.9s linear infinite;
 }
-/* ----DISCS/CD STUFF---- */
+
+.cdbutton:hover {
+  transform: scale(1.05);
+}
 
 @keyframes spin {
   from {
@@ -160,6 +163,8 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* ----DISCS/CD STUFF---- */
 
 .footer {
   height: 10vh;
