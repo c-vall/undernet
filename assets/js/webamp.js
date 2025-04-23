@@ -82,13 +82,38 @@ function click34() {
 }
 DISCBtn34.addEventListener("click", click34);
 
-// --- Initialize Webamp
+
 const webamp = new Webamp({
   initialTracks: disc31tracks,
   initialSkin: {
     url: "assets/winampskins/bluesilver",
   },
   target: document.getElementById("webamp-container"),
+  __butterchurnOptions: {
+    importButterchurn: () => Promise.resolve(window.butterchurn),
+    getPresets: () => {
+      const presets = window.butterchurnPresets.getPresets();
+      return Object.keys(presets).map((name) => {
+        return {
+          name,
+          butterchurnPresetObject: presets[name],
+        };
+      });
+    },
+    butterchurnOpen: true,
+  },
+  windowLayout: {
+    main: { position: { top: 0, left: 0 } },
+    equalizer: { position: { top: 116, left: 0 } },
+    playlist: {
+      position: { top: 232, left: 0 },
+      size: { extraWidth: 0, extraHeight: 4 },
+    },
+    milkdrop: {
+      position: { top: 0, left: 275 },
+      size: { extraHeight: 12, extraWidth: 7 },
+    },
+  },
 });
 
 webamp.renderWhenReady(document.getElementById("webamp-container")).then(() => {
