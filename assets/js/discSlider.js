@@ -17,18 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   
-  
+   
     document.querySelectorAll(".cdbutton").forEach((button) => {
       button.addEventListener("touchstart", (e) => {
-        e.stopPropagation();
+        e.stopPropagation(); 
       });
     });
   
-    // Handle custom click actions for the CD elements
+
     document.querySelectorAll(".cdbutton").forEach((button) => {
       button.addEventListener("click", function (event) {
-        event.preventDefault(); 
+        event.preventDefault(); // Prevent the default behavior
         console.log(`Button ${button.id} clicked`);
+  
+
+        document.querySelectorAll(".cdbutton").forEach((btn) => {
+          btn.classList.remove("spin");
+        });
+  
+ 
+        button.classList.add("spin");
       });
     });
   });
