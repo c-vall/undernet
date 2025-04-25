@@ -22,6 +22,7 @@ body {
   flex-flow: column;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .header {
@@ -58,11 +59,7 @@ body {
   width: 100%;
 }
 
-.disc-buttons {
-  margin-top: 10px;
-  width: 100%;
-  text-align: center;
-}
+
 
 .logo-container {
   display: flex;
@@ -82,71 +79,32 @@ body {
 }
 
 /* ----DISCS/CD STUFF---- */
-.disc-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 10%;
-}
-
-@media (max-width: 768px) {
-  .disc-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .disc-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-#disc-slider .splide__track {
-  height: 100%;
-}
-
-#disc-slider .splide__list {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-#disc-slider .splide__slide {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.splide__list {
-  display: flex !important;
-  flex-direction: row !important;
-}
-
-#disc-slider .splide__slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-.splide {
-  max-width: 100%;
+.disc-buttons {
+  margin-top: 10px;
   width: 100%;
+  text-align: center;
 }
 
-.slider-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
+/* Make the swiper container fit the screen */
+.swiper {
+  width: 100%;
+  padding: 60px 0; /* Padding for vertical spacing */
+  box-sizing: border-box;
+  z-index: 1;
 }
+
+/* Force a fixed width on each swiper slide */
+.swiper-slide {
+  width: 300px; /* Adjust this to whatever works for you */
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
+  z-index: 2; 
+}
+
+
 
 .cdbutton {
-  width: 350px;
-  height: 350px;
   margin: 0.5rem;
   border: none;
   background-repeat: no-repeat;
@@ -155,6 +113,11 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   font-size: 0; /* Hide text without removing it */
+  flex-shrink: 0;
+  width: 350px;
+  height: 350px;
+  min-width: 350px;
+  min-height: 350px;
 }
 
 #DISC11BTN {
@@ -241,6 +204,11 @@ body {
   color: rgb(224, 224, 224);
 }
 
+#webamp-container {
+  z-index: 10; 
+  position: relative;
+}
+
 @keyframes pulse {
   from {
     transform: scale(0.95);
@@ -251,3 +219,4 @@ body {
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
   }
 }
+

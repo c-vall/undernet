@@ -9,7 +9,8 @@
       type="image/x-icon"
       href="assets/images/undernetlogo.png"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body style="background-image: url('assets/images/background.png') !important; background-color: #ffffff !important;">
     <div class="header">
@@ -30,42 +31,40 @@
           class="logo"
         />
       </div>
-      <div class="slider-wrapper">
-        <section class="splide" id="disc-slider" aria-label="Disc Slider">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><button id="DISC11BTN" class="cdbutton">DISC 1.1</button></li>
-              <li class="splide__slide"><button id="DISC21BTN" class="cdbutton">DISC 2.1</button></li>
-              <li class="splide__slide"><button id="DISC22BTN" class="cdbutton">DISC 2.2</button></li>
-              <li class="splide__slide"><button id="DISC23BTN" class="cdbutton">DISC 2.3</button></li>
-              <li class="splide__slide"><button id="DISC31BTN" class="cdbutton">DISC 3.1</button></li>
-              <li class="splide__slide"><button id="DISC32BTN" class="cdbutton">DISC 3.2</button></li>
-              <li class="splide__slide"><button id="DISC33BTN" class="cdbutton">DISC 3.3</button></li>
-              <li class="splide__slide"><button id="DISC34BTN" class="cdbutton">DISC 3.4</button></li>
-            </ul>
-          </div>
-        </section>
+      <div id="webamp-container"></div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><button id="DISC11BTN" class="cdbutton">DISC 1.1</button></div>
+          <div class="swiper-slide"><button id="DISC21BTN" class="cdbutton">DISC 2.1</button></div>
+          <div class="swiper-slide"><button id="DISC22BTN" class="cdbutton">DISC 2.2</button></div>
+          <div class="swiper-slide"><button id="DISC23BTN" class="cdbutton">DISC 2.3</button></div>
+          <div class="swiper-slide"><button id="DISC31BTN" class="cdbutton">DISC 3.1</button></div>
+          <div class="swiper-slide"><button id="DISC32BTN" class="cdbutton">DISC 3.2</button></div>
+          <div class="swiper-slide"><button id="DISC33BTN" class="cdbutton">DISC 3.3</button></div>
+          <div class="swiper-slide"><button id="DISC34BTN" class="cdbutton">DISC 3.4</button></div>
+        </div>
       </div>
+
       <div class="footer">
         <p>Site made by Dreamloader, Cybermonk and Bedro</p>
         <button id="WINAMPBTN">
           <ion-icon name="headset-sharp" size="large"></ion-icon>
         </button>
       </div>
-      <div id="webamp-container"></div>
+
       <script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script> <!--webamp-->
       <script src="https://unpkg.com/butterchurn@2.6.7/lib/butterchurn.min.js"></script> <!--milkdrop-->
       <script src="https://unpkg.com/butterchurn-presets@2.4.7/lib/butterchurnPresets.min.js"></script> <!--milkdrop -->
       <script src="assets/js/webamp.js"></script>
       <script src="assets/js/cdSpin.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+      <script src="assets/js/discSlider.js"></script>
       <script
         type="module"
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script
         nomodule
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      <script src="assets/js/splide.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </div>
   </body>
 </html>
