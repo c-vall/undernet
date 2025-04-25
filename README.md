@@ -2,8 +2,7 @@
 
 ### SUGGESTIONS/THINGS TO ADD
 
-* Music player
-* Store page
-* Artists page
-* Discography page
+* """Store page"""
+* Artists profiles page
+* Discography page (?)
 * News feed / Social media posts page
