@@ -76,8 +76,7 @@ body {
 }
 
 .swiper {
-  width: 50%;
-  box-sizing: border-box;
+  max-width: 500px; /* Ensure the swiper takes the full width */
   z-index: 1;
 }
 
@@ -85,40 +84,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
+  max-width: 1000px;
   box-shadow: none;
 }
-
 
 .cdbutton {
   border: none;
   font-size: 15px;
-  min-width: 350px;
-  min-height: 350px;
+  width: 100%; /* Adjust the width to ensure proper sizing */
+  padding-top: 0%; /* Maintain aspect ratio */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  transform-origin: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform-origin: center; /* Ensure the spin happens around the center */
+  position: relative; /* Ensure the background image is contained */
 }
 
-.spin {
-  animation: spin 2s linear infinite;
+.cdbutton::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Maintain aspect ratio */
 }
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 #DISC11BTN {
   background: url("../images/cd11.png") no-repeat center center;
@@ -155,6 +143,15 @@ body {
 
 .spin {
   animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .footer {
@@ -203,4 +200,17 @@ body {
     transform: scale(1);
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
   }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 750px) {
+  .cdbutton {
+    padding-top: 90%;
+    width: 100%;
+  }
+  .swiper {
+    max-width: 70%;
+    z-index: 1;
+  }
+  
 }
