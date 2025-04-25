@@ -12,6 +12,7 @@
   font-style: normal;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -82,7 +83,7 @@ body {
 /* ----DISCS/CD STUFF---- */
 .disc-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 0px;
   justify-content: center;
   align-items: center;
@@ -92,25 +93,67 @@ body {
 
 @media (max-width: 768px) {
   .disc-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .disc-container {
-    grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.cdbutton {
-  border: none;
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
-  margin: 10px;
-  display: inline-block;
+#disc-slider .splide__track {
+  height: 100%;
+}
+
+#disc-slider .splide__list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#disc-slider .splide__slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide__list {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#disc-slider .splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.splide {
+  max-width: 100%;
+  width: 100%;
+}
+
+.slider-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.cdbutton {
+  width: 350px;
+  height: 350px;
+  margin: 0.5rem;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  font-size: 0; /* Hide text without removing it */
 }
 
 #DISC11BTN {
