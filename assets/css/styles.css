@@ -76,7 +76,7 @@ body {
 }
 
 .swiper {
-  max-width: 500px; /* Ensure the swiper takes the full width */
+  max-width: 500px;
   z-index: 1;
 }
 
@@ -84,28 +84,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
-  box-shadow: none;
+}
+
+.swiper-slide-shadow {
+  display: none !important;
+}
+
+.swiper, .swiper-slide {
+  overflow: visible !important;
 }
 
 .cdbutton {
   border: none;
   font-size: 15px;
-  width: 100%; /* Adjust the width to ensure proper sizing */
-  padding-top: 0%; /* Maintain aspect ratio */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  transform-origin: center; /* Ensure the spin happens around the center */
-  position: relative; /* Ensure the background image is contained */
+  transform-origin: center;
+  position: relative;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white
 }
 
 .cdbutton::before {
   content: "";
   display: block;
-  padding-top: 100%; /* Maintain aspect ratio */
+  padding-top: 100%;
 }
 
 #DISC11BTN {
@@ -142,7 +151,7 @@ body {
 }
 
 .spin {
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {

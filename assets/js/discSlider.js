@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".mySwiper", {
       effect: "cards",
-      grabCursor: false,
+      grabCursor: true,
       centeredSlides: true,
-      loop: true,
+      loop: false,
       slideShadows: false,
       mousewheel: true,
       keyboard: true,
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     document.querySelectorAll(".cdbutton").forEach((button) => {
       button.addEventListener("touchstart", (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
       });
     });
   
