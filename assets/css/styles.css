@@ -94,7 +94,7 @@ body {
 
 .cdbutton {
   border: none;
-  font-size: 15; /* Hide text without removing it */
+  font-size: 15;
   min-width: 350px;
   min-height: 350px;
 }
