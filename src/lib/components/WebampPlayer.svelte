@@ -1,8 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-  
-    export let initialTracks = [];
-    export let skinUrl = "../../webampskins/bluesilver";
+    import { base } from '$app/paths';
+    export let skinUrl = `${base}/webampskins/bluesilver`;
   
     let webamp;
   

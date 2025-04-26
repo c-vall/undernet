@@ -18,7 +18,7 @@
     }
   
     .logo-container img {
-      max-width: 800px;
+      max-width: 500px;
       width: 80%;
       margin: auto;
       display: block;

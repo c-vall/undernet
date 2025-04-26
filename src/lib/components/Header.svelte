@@ -4,12 +4,12 @@
 <Hamburger type="elastic" />
 <nav class="header">
     <div id="header-container"></div>
+    <Hamburger type="elastic" />
     <ul>
-      <li class="header-item"><b>HOME</b></li>
-      <li class="header-item"><b>MEMBERS</b></li>
-      <li class="header-item"><b>SHOP</b></li>
-      <li class="header-item"><b>ABOUT</b></li>
-      <li class="header-item"><b>SOCIAL</b></li>
+      <li class="header-item" id="members"></li>
+      <li class="header-item" id="merch">󰒚</li>
+      <li class="header-item" id="social">󰤉</li>
+      <li class="header-item" id="about">󰋼</li>
     </ul>
   </nav>
 <style>
@@ -30,7 +30,7 @@
   }
   
   .header-item {
-    font-family: "Neutronica DNA", sans-serif;
+    font-family: 'Symbols Nerd Font', sans-serif;
     color: white;
     display: block;
     list-style-type: none;
