@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: "Neutronica Geometric";
+    src: url("../fonts/Neutronica Geometric.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Neutronica DNA";
+    src: url("../fonts/Neutronica DNA.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-size: cover !important;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #WINAMPBTN {
+    opacity: 0;
+    margin: 0 20px 0 20px;
+    width: 50px;
+    height: 50px;
+    background: rgb(214, 214, 214);
+    color: rgb(126, 126, 126);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.5s;
+    transition: color 0.5s;
+  }
+  
+  #WINAMPBTN:hover {
+    background: rgb(141, 141, 141);
+    color: rgb(224, 224, 224);
+  }
+  
+  #webamp-container {
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media (max-width: 750px) {
+    .cdbutton {
+      padding-top: 90%;
+      width: 100%;
+    }
+    .swiper {
+      max-width: 70%;
+      z-index: 1;
+    }
+    
+  }
+
+.swiper-slide-shadow {
+display: none !important;
+}
+  
