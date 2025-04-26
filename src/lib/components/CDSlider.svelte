@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import { register } from 'swiper/element/bundle';
+    import { base } from '$app/paths';
   
     const discs = [
       { id: 'DISC11BTN', label: 'DISC 1.1', img: 'cd11.png' },
@@ -47,7 +48,8 @@
           class="cdbutton"
           on:click|preventDefault={(e) => handleClick(e, disc.id)}
           on:touchstart={stopPropagation}
-          style={`background-image: url('/images/${disc.img}')`}
+          style={`background-image: url('${base}/images/${disc.img}')`}
+
         >
           {disc.label}
         </div>

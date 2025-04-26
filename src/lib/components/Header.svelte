@@ -1,7 +1,6 @@
 <script>
   import { Hamburger } from 'svelte-hamburgers';
 </script>
-
 <Hamburger type="elastic" />
 <nav class="header">
     <div id="header-container"></div>
