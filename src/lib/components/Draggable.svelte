@@ -31,7 +31,7 @@
   
   
   <div bind:this={draggableBox} class="draggable-container">
-    <img src="{base}/images/logo_default.png" alt="Logo" />
+    <img src="{base}/images/map.png" alt="Logo" />
   </div>
   
   <style>
@@ -56,18 +56,6 @@
       animation: pulse 2s infinite alternate;
       
     }
-  
-    @keyframes pulse {
-      from {
-        transform: scale(0.95);
-        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-      }
-      to {
-        transform: scale(1);
-        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
-      } 
-    }
-
 
 </style>
   

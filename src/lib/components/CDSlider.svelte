@@ -77,7 +77,7 @@
   <style>
     swiper-container {
       width: 100%;
-      max-width: 300px;
+      max-width: 290px;
       height: auto;
     }
   
