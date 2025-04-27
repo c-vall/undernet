@@ -3,8 +3,7 @@
 </script>
 <div class="logo-container">
   <img src="{base}/images/logo_default.png" alt="Logo" />
-
-  </div>
+</div>
   
   <style>
     .logo-container {
@@ -15,12 +14,12 @@
       opacity: 1;
       flex: 1;
       width: 100%;
+      justify-content: center;
     }
   
     .logo-container img {
-      max-width: 500px;
+      max-width: 600px;
       width: 80%;
-      margin: auto;
       display: block;
     }
   

@@ -1,41 +1,56 @@
 <script>
   import { Hamburger } from 'svelte-hamburgers';
+  let isOpen = false;
+
+  function toggleMenu() {
+    isOpen = !isOpen;
+    console.log('isOpen:', isOpen);
+  }
 </script>
-<Hamburger type="elastic" />
+
 <nav class="header">
-    <div id="header-container"></div>
-    <Hamburger type="elastic" />
+  <div id="header-container">
+    <Hamburger
+      type="elastic"
+      toggled={isOpen}
+      toggle={toggleMenu}
+    />
+  </div>
+
+  {#if isOpen}
     <ul>
       <li class="header-item" id="members"></li>
       <li class="header-item" id="merch">󰒚</li>
       <li class="header-item" id="social">󰤉</li>
       <li class="header-item" id="about">󰋼</li>
     </ul>
-  </nav>
-<style>
+  {/if}
+</nav>
 
-  .header {
-    height: 5vh;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
+<style>
+  nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .header ul {
-    display: flex;
-    justify-content: space-between;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
   }
-  
-  .header-item {
-    font-family: 'Symbols Nerd Font', sans-serif;
-    color: white;
-    display: block;
-    list-style-type: none;
-    text-align: center;
-    font-size: 30px;
-    padding: 15px;
+
+  li {
+    margin-bottom: 8px;
   }
+
+  @font-face {
+  font-family: 'Symbols Nerd Font';
+  src: url('/fonts/SymbolsNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 </style>
+
+
+

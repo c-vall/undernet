@@ -3,7 +3,9 @@
   import { register } from 'swiper/element/bundle';
   import { base } from '$app/paths';
   import { fade } from 'svelte/transition';
-
+  import { gsap } from 'gsap';
+  import { Draggable } from 'gsap/Draggable';
+  import CDSlider from '$lib/components/CDSlider.svelte';
 
   const discs = [
     { id: 'DISC11BTN', label: 'DISC 1.1', img: 'cd11' },
@@ -31,6 +33,7 @@
   function stopPropagation(event) {
     event.stopPropagation();
   }
+  
 </script>
 
 
@@ -74,7 +77,7 @@
   <style>
     swiper-container {
       width: 100%;
-      max-width: 500px;
+      max-width: 300px;
       height: auto;
     }
   
@@ -106,7 +109,6 @@ swiper-slide {
   padding-top: 100%;
 }
 
-/* Both layers (case and disc) */
 .layer {
   position: absolute;
   inset: 0;
@@ -116,10 +118,10 @@ swiper-slide {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Spin animation */
 .spin {
   animation: spin 1s linear infinite;
 }
+
 
 @keyframes spin {
   from {
