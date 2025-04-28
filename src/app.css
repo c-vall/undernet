@@ -112,13 +112,19 @@
   height: min(90vh, 1000px);
   max-width: 90%;
   max-height: 90vh;
-  overflow: hidden;
+  overflow: visible;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
 
 #logo-container {
-  background-image: url('/images/window_bg.png');
+  background-image: url('/images/logo_bg/surge1.gif');
   flex: 2;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
 }
 
 #nextologo-container {
@@ -141,16 +147,19 @@
   display: flex;
   flex-direction: column;
   flex: 1; 
+  overflow: visible;
 }
 
 #video-container {
   background-image: url('/images/window_bg.png');
   flex-grow: 1;
+  margin-bottom: 0px;
 }
 
 .lower-music-content {
   display: flex;
   gap: 10px;
+  margin-top: 0px;
 }
 
 #cdslider-container {
@@ -161,6 +170,11 @@
   background-image: url('/images/window_bg_light.png');
   flex: 2;
 }
+
+.upper-member-content {
+  display: flex;
+}
+
 
 #member-container {
   background-image: url('/images/background.png');
@@ -173,12 +187,15 @@
   min-height: 0; 
 }
 
+#member-list {
+  flex: 1
+}
+
 #world-map {
   background-image: url('/images/background.png');
   display: flex;
-  flex-direction: column;
   margin-top: 0px;
-  flex: 1; 
+  flex: 2;
   max-height: 500px; 
   overflow: hidden;
 }

@@ -6,6 +6,7 @@
   import '../app.css';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import RandomLogo from '$lib/components/RandomLogo.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import CDSlider from '$lib/components/CDSlider.svelte';
   import WebampPlayer from '$lib/components/WebampPlayer.svelte';
@@ -28,11 +29,12 @@
   class="main-content"
   style={"background-image: url('" + base + "/images/background_test.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #ffffff;"}
 >
-  <section class="window" id="main-container">
-    <!-- Header -->
+  <section id="main-container">
     <div class="header-container">
       <div class="window" id="logo-container">
-        <Logo/>
+        <RandomLogo>
+          <Logo />
+        </RandomLogo>
       </div>
       <div class="window" id="nextologo-container">
         <ul class="nav-menu">
@@ -45,7 +47,6 @@
       </div>
     </div>
 
-    <!-- Content Wrapper -->
     <div class="content-wrapper">
       <div class="content-window {activeSection !== 'player' ? 'hidden' : ''}" id="player-container">
         <div class="window" id="video-container"></div>
@@ -58,8 +59,12 @@
       </div>
 
       <div class="content-window {activeSection !== 'members' ? 'hidden' : ''}" id="members-container">
-        <div class="window" id="world-map">
-          <img src="{base}/images/map.png" alt="World Map" />
+        <div class="upper-member-content">
+          <div class="window" id="world-map">
+            <img src="{base}/images/map/map.png" alt="World Map" />
+          </div>
+          <div class="window" id="members-list">
+          <div>
         </div>
       </div>
 
