@@ -20,10 +20,14 @@
 
 <svelte:head>
   <title>under.net</title>
-  <link rel="icon" href="{base}/images/undernetlogo.png" />
+  <link rel="icon" href="{base}/images/loading.png" />
+  <meta name="darkreader-lock">
 </svelte:head>
 
-<div class="main-content" style={"background-image: url('" + base + "/images/background.png'); background-color: #ffffff;"}>
+<div
+  class="main-content"
+  style={"background-image: url('" + base + "/images/background_test.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #ffffff;"}
+>
   <section class="window" id="main-container">
     <!-- Header -->
     <div class="header-container">

@@ -10,7 +10,7 @@
       display: flex;
       text-align: center;
       filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-      animation: pulse 3s infinite alternate;
+      animation: pulse 1s infinite alternate;
       opacity: 1;
       flex: 1;
       width: 100%;
