@@ -1,18 +1,13 @@
 <script>
   import { base } from '$app/paths';
-  import { fly } from 'svelte/transition';
-  import { elasticOut } from 'svelte/easing';
-
   import '../app.css';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-  import RandomLogo from '$lib/components/RandomLogo.svelte';
-  import Logo from '$lib/components/Logo.svelte';
-  import CDSlider from '$lib/components/CDSlider.svelte';
-  import WebampPlayer from '$lib/components/WebampPlayer.svelte';
-  import Draggable from '$lib/components/Draggable.svelte';
 
-  let activeSection = 'player';
+  import HeaderContainer from '$lib/components/HeaderContainer.svelte';
+  import SectionWrapper from '$lib/components/SectionWrapper.svelte';
+  import PlayerContent from '$lib/components/PlayerContent.svelte';
+  import Artists from '$lib/components/Artists.svelte';
+
+  let activeSection = 'members';
 
   function setSection(section) {
     activeSection = section;
@@ -27,62 +22,29 @@
 
 <div
   class="main-content"
-  style={"background-image: url('" + base + "/images/background_test.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #ffffff;"}
+  style={"background-image: url('" + base + "/images/background_test.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #181818;"}
 >
   <section id="main-container">
-    <div class="header-container">
-      <div class="window" id="logo-container">
-        <RandomLogo>
-          <Logo />
-        </RandomLogo>
-      </div>
-      <div class="window" id="nextologo-container">
-        <ul class="nav-menu">
-          <li class="header-item"><button class="nav-button" on:click={() => setSection('members')}></button></li>
-          <li class="header-item"><button class="nav-button" on:click={() => setSection('player')}>󰓃</button></li>
-          <li class="header-item"><button class="nav-button" on:click={() => setSection('merch')}>󰒚</button></li>
-          <li class="header-item"><button class="nav-button" on:click={() => setSection('social')}>󰤉</button></li>
-          <li class="header-item"><button class="nav-button" on:click={() => setSection('about')}>󰋼</button></li>
-        </ul>
-      </div>
-    </div>
+    <HeaderContainer {setSection} />
 
     <div class="content-wrapper">
-      <div class="content-window {activeSection !== 'player' ? 'hidden' : ''}" id="player-container">
-        <div class="window" id="video-container"></div>
-        <div class="lower-music-content">
-          <div id="cdslider-container">
-            <CDSlider />
-          </div>
-          <div class="window" id="track-container"></div>
-        </div>
-      </div>
+      <div class="content-window" id="music-player"></div>
+      <SectionWrapper id="player-container" isVisible={activeSection === 'player'}>
+        <PlayerContent />
+      </SectionWrapper>
 
-      <div class="content-window {activeSection !== 'members' ? 'hidden' : ''}" id="members-container">
-        <div class="upper-member-content">
-          <div class="window" id="world-map">
-            <img src="{base}/images/map/map.png" alt="World Map" />
-          </div>
-          <div class="window" id="members-list">
-          <div>
-        </div>
-      </div>
+      <SectionWrapper id="members-container" isVisible={activeSection === 'members'}>
+        <Artists />
+      </SectionWrapper>
 
-      <div class="content-window {activeSection !== 'merch' ? 'hidden' : ''}" id="merch-container">
+      <SectionWrapper id="merch-container" isVisible={activeSection === 'merch'}>
+      </SectionWrapper>
 
-      </div>
+      <SectionWrapper id="social-container" isVisible={activeSection === 'social'}>
+      </SectionWrapper>
 
-      <div class="content-window {activeSection !== 'social' ? 'hidden' : ''}" id="social-container">
-
-      </div>
-
-      <div class="content-window {activeSection !== 'about' ? 'hidden' : ''}" id="about-container">
-
-      </div>
+      <SectionWrapper id="about-container" isVisible={activeSection === 'about'}>
+      </SectionWrapper>
     </div>
-
   </section>
 </div>
-
-<style>
-</style>

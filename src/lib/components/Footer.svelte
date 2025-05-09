@@ -37,5 +37,3 @@
       color: rgb(224, 224, 224);
     }
   </style>
-  
-  <!-- Add this to your main layout or +page.svelte once -->
